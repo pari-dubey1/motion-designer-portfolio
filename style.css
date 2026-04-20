@@ -1,0 +1,262 @@
+/* ================================================= */
+/* === BASE DARK MODE & LINK STYLES === */
+/* ================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@500&display=swap');
+.nav-link {
+    color: #9CA3AF; /* gray-400 */
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Desktop Navbar Hover */
+.nav-link:hover {
+    color: white; 
+    border-bottom-color: #818CF8; /* indigo-400 */
+}
+
+/* Primary Text Colors & Borders */
+.text-white { color: #ffffff; } 
+.text-gray-100 { color: #f3f4f6; }
+.text-gray-300 { color: #d1d5db; }
+.text-gray-400 { color: #9ca3af; }
+.border-gray-800 { border-color: #1f2937; }
+
+/* Mobile Menu Button */
+#mobile-menu-button { color: #9ca3af; }
+#mobile-menu-button:hover { 
+    color: #ffffff; 
+    background-color: #1f2937; 
+}
+
+/* Modal Close Button */
+#project-modal .bg-gray-700 {
+    background-color: #374151;
+    color: #d1d5db;
+}
+#project-modal .bg-gray-700:hover {
+    background-color: #4b5563;
+    color: #ffffff;
+}
+
+/* body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* Glass Button */
+.glass-btn {
+  padding: 14px 30px;
+  font-size: 18px;
+  color: white;
+  fill: rgba(238, 238, 238, 0.107);
+  border: white solid 4px;
+  border-radius: 40px;
+  cursor: pointer;
+  position: relative;
+  /* Glass effect */
+  filter: blur(0.2px);
+  background: rgba(238, 238, 238, 0.00);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+
+  /* Soft border */
+  border: 2px solid rgb(255, 255, 255);
+
+  /* Inner glow */
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 2px rgba(255, 255, 255, 0.358),
+    0 8px 20px rgba(0, 0, 0, 0.2);
+
+  /* Smooth effect */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+ .glass-btn:hover {
+  background: rgba(238, 238, 238, 0.111);
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.503),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.3),
+    0 10px 25px rgba(0, 0, 0, 0.3);
+} 
+
+/* Active (click) effect */
+.glass-btn:active {
+  transform: scale(0.96);
+}
+
+.glass-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.05)
+  );
+
+  opacity: 0.4;
+  pointer-events: none;
+}
+  
+/* Mobile Menu Links */
+#mobile-menu a {
+    color: #d1d5db;
+}
+#mobile-menu a:hover {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+#mobile-menu .border-t { border-color: #1f2937; }
+
+/* Section Backgrounds */
+.bg-gray-900 { 
+    background-color: #111827; 
+}
+
+/* Contact Section and Footer */
+#contact.bg-gray-900 { 
+    background-color: #111827; 
+}
+footer.bg-gray-950 {
+     background-color: #030712;
+     border-top-color: #1f2937;
+}
+
+/* Contact/Footer Links and Inputs */
+.bg-gray-800 {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #ffffff;
+}
+.bg-gray-800:hover { background-color: #374151; }
+
+/* Social Links & Phone */
+a[href^="tel"] {
+     color: #818cf8 !important; 
+}
+.flex.justify-center.space-x-6 a {
+    color: #9ca3af !important;
+}
+.flex.justify-center.space-x-6 a:hover {
+    color: #818cf8 !important;
+}
+
+/* Reel Gallery & Testimonials */
+.reel-item-inner { 
+    background-color: #111827; 
+    border-color: #1f2937; 
+}
+.testimonial-card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+.testimonial-card p { color: #d1d5db; }
+
+/* Dark mode marquee gradient fade */
+.bg-gradient-to-r.from-gray-900 {
+    background-image: linear-gradient(to right, #111827, rgba(17, 24, 39, 0));
+}
+.bg-gradient-to-l.from-gray-900 {
+    background-image: linear-gradient(to left, #111827, rgba(17, 24, 39, 0));
+}
+
+/* Toolkit Logo Style */
+.toolkit-logo {
+    width: 4rem; 
+    height: 4rem; 
+    fill: #9ca3af; 
+    transition: all 0.3s ease;
+}
+.toolkit-item:hover .toolkit-logo { 
+    color: #C4B5FD; 
+    fill: #C4B5FD; 
+}
+
+/* ================================================= */
+
+
+/* 3D Reel Animation (Scroll-based) */
+#reel-gallery { perspective: 1500px; }
+.reel-item-stagger {
+    transform: translateY(100px) rotateX(-30deg) scale(0.9); opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 0.6s ease;
+}
+#reel-gallery.is-visible .reel-item-stagger:nth-child(1) { transition-delay: 0.1s; }
+#reel-gallery.is-visible .reel-item-stagger:nth-child(2) { transition-delay: 0.2s; }
+#reel-gallery.is-visible .reel-item-stagger:nth-child(3) { transition-delay: 0.3s; }
+#reel-gallery.is-visible .reel-item-stagger:nth-child(4) { transition-delay: 0.4s; }
+#reel-gallery.is-visible .reel-item-stagger:nth-child(5) { transition-delay: 0.5s; }
+#reel-gallery.is-visible .reel-item-stagger {
+    transform: translateY(0) rotateX(0) scale(1); opacity: 1;
+}
+
+/* Scrollbar for reel gallery */
+#reel-gallery::-webkit-scrollbar { height: 8px; }
+#reel-gallery::-webkit-scrollbar-track { background: #1f2937; border-radius: 10px; }
+#reel-gallery::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 10px; }
+#reel-gallery::-webkit-scrollbar-thumb:hover { background: #6366f1; }
+
+/* Gradient Hover Effect for Reel Item */
+.reel-item {
+    position: relative; z-index: 1; transform: scale(1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.reel-item-inner { position: relative; z-index: 2; }
+.reel-item::before {
+    content: ""; position: absolute; inset: -3px;
+    background: linear-gradient(120deg, #6366F1, #A78BFA, #EC4899); 
+    border-radius: 1.5rem; opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease; z-index: 0;
+    transform: scale(0.95);
+}
+.reel-item:hover::before { opacity: 1; transform: scale(1); }
+/* SHOWREEL HOVER EFFECT */
+.reel-item:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.4); 
+} 
+
+/* Brand Marquee */
+.brand-logo {
+    font-size: 1.5rem; font-weight: 700; color: #4B5563; 
+    transition: color 0.3s ease;
+}
+.brand-logo:hover { color: #9CA3AF; }
+
+/* Testimonial Animation */
+/* .testimonial-card {
+    transform: translateY(50px) scale(0.95); opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.215, 0.610, 0.355, 1), opacity 0.6s ease-out;
+}
+.testimonial-card.is-visible { transform: translateY(0) scale(1); opacity: 1; }
+.testimonial-card:nth-of-type(2) { transition-delay: 0.15s; }
+.testimonial-card:nth-of-type(3) { transition-delay: 0.3s; } */
+
+/* ================================================= */
+/* === INFINITE SCROLL ANIMATION FOR BRANDS === */
+/* ================================================= */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 70s linear infinite;
+    width: fit-content;
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
